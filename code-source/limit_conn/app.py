@@ -31,7 +31,7 @@ def browse_directory(path):
     return render_template_string('''
     <!doctype html>
     <title>Download server</title>
-    <h2>파일 다운로드</h2>
+    <h2>업로드된 파일 및 디렉토리</h2>
     <ul>
       {{ file_list|safe }}
     </ul>
