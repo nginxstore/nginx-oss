@@ -1,6 +1,7 @@
 import requests
 import re
 
+# num_requests에 요청할 횟수를 지정합니다. 
 def request_and_check(url, num_requests=1000):
     version_1_count = 0 
     version_2_count = 0 
