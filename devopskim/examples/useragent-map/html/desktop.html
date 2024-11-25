@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desktop Frame</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Full-page container */
+        body, html {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f5f5f5;
+        }
+
+        /* Styling the MacBook frame */
+        .desktop-frame {
+            width: 1400px; /* Adjusted width */
+            height: 800px; /* Adjusted height */
+            border: 3px solid #000;
+            border-radius: 10px;
+            position: relative;
+            background-color: #fff;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        /* MacBook screen area */
+        .screen {
+            width: 90%;
+            height: 80%;
+            background-color: #e5e5e5;
+            margin: 20px auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Base area below the screen */
+        .base {
+            width: 100%;
+            height: 30px;
+            background-color: #000;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            border-radius: 0 0 5px 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Base notch (centered) */
+        .notch {
+            width: 60px;
+            height: 10px;
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        /* iFrame styling to fit within the MacBook screen */
+        .pc-frame {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="desktop-frame">
+        <div class="screen">
+            <iframe class="pc-frame" src="https://nginxstore.com"></iframe>
+        </div>
+        <div class="base">
+            <div class="notch"></div>
+        </div>
+    </div>
+</body>
+</html>
